@@ -22,6 +22,6 @@ public class Aluno{
     }
 
     public String toString() {
-        return "Nome: " + nome + "Nota: " + String.format("%.2f", nota) + "Matrícula: " + matricula;
+        return "Nome: " + nome + "; Nota: " + String.format("%.2f", nota) + "; Matrícula: " + matricula;
     }
 }
