@@ -90,9 +90,9 @@ public class Main {
             String nome = NOMES[random.nextInt(NOMES.length)] + " " +
                     SOBRENOMES[random.nextInt(SOBRENOMES.length)];
             int matricula = 100000 + random.nextInt(900000);
-            double nota = random.nextDouble() * 10;
+            int nota = random.nextInt() * 10;
 
-            alunos.add(new Aluno(nome, nota, matricula));
+            alunos.add(new Aluno(nota, nome, matricula));
         }
 
         return alunos;
