@@ -1,11 +1,11 @@
 public class Aluno{
     private String nome;
-    private double nota;
+    private int nota;
     private int matricula;
 
-    public Aluno(String nome, double nota, int matricula) {
-        this.nome = nome;
+    public Aluno(int nota, String nome, int matricula) {
         this.nota = nota;
+        this.nome = nome;
         this.matricula = matricula;
     }
 
@@ -13,7 +13,7 @@ public class Aluno{
         return nome;
     }
 
-    public double getNota() {
+    public int getNota() {
         return nota;
     }
 
@@ -22,6 +22,6 @@ public class Aluno{
     }
 
     public String toString() {
-        return "Nome: " + nome + "; Nota: " + String.format("%.2f", nota) + "; Matrícula: " + matricula;
+        return "Nota: " + nota + "; Nome: " + nome + "; Matrícula: " + matricula;
     }
 }
