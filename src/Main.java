@@ -26,11 +26,11 @@ public class Main {
 
             if (i >= 5) {
                 somaCounting += (fim - inicio);
-                System.out.println("Execução " + (i+1) + ": " + (fim - inicio) + " ns");
+                //System.out.println("Execução " + (i+1) + ": " + (fim - inicio) + " ns");
             }
         }
         long mediaCounting = somaCounting / (REPETICOES - 5);
-        System.out.println("Tempo médio Counting Sort (int[]): " + mediaCounting + " ns");
+        //System.out.println("Tempo médio: " + mediaCounting + " ns");
 
 
 
@@ -62,22 +62,22 @@ public class Main {
 
             if (i >= 5) {
                 somaOrdenaAlunos += (fim - inicio);
-                System.out.println("Execução " + (i+1) + ": " + (fim - inicio) + " ns");
+               // System.out.println("Execução " + (i+1) + ": " + (fim - inicio) + " ns");
             }
         }
-
+/*
         System.out.println("Lista Ordenada");
         if (ultimaListaOrdenada != null) {
             for (Aluno a : ultimaListaOrdenada) {
                 System.out.println(a);
             }
         } else {
-            System.out.println("Nenhuma lista foi gerada para impressão.");
+            System.out.println("Nenhuma lista foi gerada");
         }
-
+*/
 
         long mediaAlunos = somaOrdenaAlunos / (REPETICOES - 5);
-        System.out.println("Tempo médio Ordenação de Alunos: " + mediaAlunos + " ns");
+        System.out.println("Tempo médio: " + mediaAlunos + " ns");
     }
 
 
@@ -90,7 +90,7 @@ public class Main {
             String nome = NOMES[random.nextInt(NOMES.length)] + " " +
                     SOBRENOMES[random.nextInt(SOBRENOMES.length)];
             int matricula = 100000 + random.nextInt(900000);
-            int nota = random.nextInt() * 10;
+            int nota = random.nextInt(11);
 
             alunos.add(new Aluno(nota, nome, matricula));
         }
