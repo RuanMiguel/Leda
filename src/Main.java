@@ -43,16 +43,7 @@ public class Main {
 
             long inicio = System.nanoTime();
 
-            alunos.sort(
-                    java.util.Comparator
-                            .comparingDouble(Aluno::getNota).reversed()
-                            .thenComparing(Aluno::getNome)
-                            .thenComparingInt(Aluno::getMatricula)
-            );
-
-            // for (Aluno a : alunos) {
-            //     System.out.println(a);
-            // }
+            Collections.sort(alunos);
 
             long fim = System.nanoTime();
 
