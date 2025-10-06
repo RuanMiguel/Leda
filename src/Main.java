@@ -11,29 +11,6 @@ public class Main {
         final int TAMANHO = 50;
         final int REPETICOES = 20;
 
-        TipoVetor tipo = TipoVetor.ALEATORIO;
-
-        int[] vetorOriginal = Utilitarios.geraVetor(TAMANHO, tipo);
-
-        long somaCounting = 0;
-        for (int i = 0; i < REPETICOES; i++) {
-            int[] vetorA = vetorOriginal.clone();
-            int[] vetorB = new int[vetorA.length];
-
-            long inicio = System.nanoTime();
-            Sort.countingSort(vetorA, vetorB);
-            long fim = System.nanoTime();
-
-            if (i >= 5) {
-                somaCounting += (fim - inicio);
-                //System.out.println("Execução " + (i+1) + ": " + (fim - inicio) + " ns");
-            }
-        }
-        long mediaCounting = somaCounting / (REPETICOES - 5);
-        //System.out.println("Tempo médio: " + mediaCounting + " ns");
-
-
-
         List<Aluno> alunosOriginais = gerarAlunos(TAMANHO);
         List<Aluno> ultimaListaOrdenada = null;
 
@@ -43,7 +20,7 @@ public class Main {
 
             long inicio = System.nanoTime();
 
-            Collections.sort(alunos);
+            Sort.insertionSortGenerico(alunos);
 
             long fim = System.nanoTime();
 
